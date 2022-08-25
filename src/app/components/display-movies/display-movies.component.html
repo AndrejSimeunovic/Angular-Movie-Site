@@ -1,28 +1,13 @@
 <header class="search-container">
     <h1> {{ title }} </h1>
-  </header>
+</header>
 <div *ngIf="categoryClicked" class="movie-container row">
-    <div 
-        class="column" 
-        *ngFor="let movie of filteredMovies"
-    >   
-        <a
-            class="movie-name"
-            routerLink="{{ '/movie-details/'+movie.imdbID }}"
-        >
-            <img 
-                class="thumbnail"
-                src="{{ movie.Poster }}" 
-                alt="{{ movie.Title }}" 
-                width="189.33" 
-                height="280.2"
-            >
+    <div class="column" *ngFor="let movie of filteredMovies">
+        <a class="movie-name" routerLink="{{ '/movie-details/'+movie.imdbID }}">
+            <img class="thumbnail" src="{{ movie.Poster }}" alt="{{ movie.Title }}" width="189.33" height="280.2">
         </a>
         <h3 class="overflow-text">
-            <a 
-                title="{{ movie.Title }}"
-                routerLink="{{ '/movie-details/'+movie.imdbID }}"
-            >
+            <a title="{{ movie.Title }}" routerLink="{{ '/movie-details/'+movie.imdbID }}">
                 {{ movie.Title }}
             </a>
         </h3>
@@ -35,27 +20,12 @@
 </div>
 
 <div *ngIf="!categoryClicked" class="movie-container row">
-    <div 
-        class="column" 
-        *ngFor="let movie of movies"
-    >   
-        <a
-            class="movie-name"
-            routerLink="{{ '/movie-details/'+movie.imdbID }}"
-        >
-            <img 
-                class="thumbnail"
-                src="{{ movie.Poster }}" 
-                alt="{{ movie.Title }}" 
-                width="189.33" 
-                height="280.2"
-            >
+    <div class="column" *ngFor="let movie of movies">
+        <a class="movie-name" routerLink="{{ '/movie-details/'+movie.imdbID }}">
+            <img class="thumbnail" src="{{ movie.Poster }}" alt="{{ movie.Title }}" width="189.33" height="280.2">
         </a>
         <h3 class="overflow-text">
-            <a 
-                title="{{ movie.Title }}"
-                routerLink="{{ '/movie-details/'+movie.imdbID }}"
-            >
+            <a title="{{ movie.Title }}" routerLink="{{ '/movie-details/'+movie.imdbID }}">
                 {{ movie.Title }}
             </a>
         </h3>
